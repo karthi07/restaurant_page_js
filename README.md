@@ -7,6 +7,9 @@ Project to practice DOM manipulation by dynamically rendering a simple restauran
 - Webpack
 - Bootstrap
 
+## Live Link
+
+[Js Restaurant](https://karthi07.github.io/restaurant_page_js/)
 
 ![Home Page](dist/screenshots/home_page.png)
 ![Order Page](dist/screenshots/order_page.png)
