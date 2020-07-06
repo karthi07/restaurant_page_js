@@ -17,13 +17,13 @@ const mainHtml = `
   <div class="collapse navbar-collapse ml-4" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item px-3 active" id="homeBtn">
-        <a class="nav-link" data-id="homeBtn" href="main">Home </a>
+        <a class="nav-link" data-id="homeBtn" href="#data">Home </a>
       </li>
       <li class="nav-item px-3" id="orderBtn">
-        <a class="nav-link" data-id="orderBtn" href="main"> Order Food </a>
+        <a class="nav-link" data-id="orderBtn" href="#main"> Order Food </a>
       </li>
       <li class="nav-item px-3" id="contactBtn">
-        <a class="nav-link" data-id="contactBtn" href="main"> Contact </a>
+        <a class="nav-link" data-id="contactBtn" href="#main"> Contact </a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -32,7 +32,7 @@ const mainHtml = `
     </form>
   </div>
 </nav>
-<main class="container" id="main" ></main>
+<main class="container" id="main"></main>
 `
 
 function clear_class_list() {
@@ -43,11 +43,11 @@ function clear_class_list() {
 
 
 contentElement.innerHTML = mainHtml
-// contentElement.innerHTML += mainHtml
+// Initial load
 const mainElement = document.querySelector("main");
 addHomeCtn(mainElement)
 
-
+//Event Listener
 document.querySelector("#navbar").addEventListener("click", (e) => {
   e.preventDefault();
   if (e.target.classList.contains("nav-link")) {
@@ -66,9 +66,3 @@ document.querySelector("#navbar").addEventListener("click", (e) => {
     }
   }
 });
-
-
-
-// addHomeCtn(mainElement)
-// addOrderCtn(mainElement)
-// addContactCtn(mainElement)

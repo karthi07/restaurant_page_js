@@ -1,6 +1,6 @@
 const contactHtml = `
 <div id="contact" class="position-relative overflow-hidden h-100 p-3 p-md-5 m-md-3 my-auto text-center bg-light">
-  <div class="col-md-10 p-lg-5 mx-auto">
+  <div id="data" class="col-md-10 p-lg-5 mx-auto">
     <h1 class="display-4 font-weight-normal">Contact </h1>
     <p class="lead font-weight-normal my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
     eiusmod
