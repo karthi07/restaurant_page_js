@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import addHomeCtn from './home';

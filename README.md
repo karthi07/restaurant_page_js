@@ -1,5 +1,5 @@
 # Restaurant Page Using Java Script
-Project to practe DOM manipulation by dynamically rendering a simple restaurant homepage!  using JavaScript alone to generate the entire contents of the website!
+Project to practice DOM manipulation by dynamically rendering a simple restaurant homepage!  using JavaScript alone to generate the entire contents of the website!
 
 ## Built With
 
