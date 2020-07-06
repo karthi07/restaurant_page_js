@@ -12,8 +12,8 @@ culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
   <div class="product-device shadow-sm d-none d-md-block"></div>
   <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-</div>`
+</div>`;
 
-export function addContactCtn(element) {
-  element.innerHTML = contactHtml
+export default function addContactCtn(element) {
+  element.innerHTML = contactHtml;
 }

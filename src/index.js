@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { addHomeCtn } from "./home.js"
-import { addOrderCtn } from "./order.js"
-import { addContactCtn } from "./contact.js"
+import addHomeCtn from './home';
+import addOrderCtn from './order';
+import addContactCtn from './contact';
 
-const contentElement = document.querySelector("#content");
+const contentElement = document.querySelector('#content');
 
 const mainHtml = `
 <nav id="navbar" class="navbar  fixed-top  navbar-expand-lg navbar-dark  bg-dark">
@@ -33,35 +33,37 @@ const mainHtml = `
   </div>
 </nav>
 <main class="container" id="main"></main>
-`
+`;
 
-function clear_class_list() {
-  document.querySelector("#homeBtn").classList = "nav-item px-3"
-  document.querySelector("#orderBtn").classList = "nav-item px-3"
-  document.querySelector("#contactBtn").classList = "nav-item px-3"
+function clearClassList() {
+  document.querySelector('#homeBtn').classList = 'nav-item px-3';
+  document.querySelector('#orderBtn').classList = 'nav-item px-3';
+  document.querySelector('#contactBtn').classList = 'nav-item px-3';
 }
 
-
-contentElement.innerHTML = mainHtml
+contentElement.innerHTML = mainHtml;
 // Initial load
-const mainElement = document.querySelector("main");
-addHomeCtn(mainElement)
+const mainElement = document.querySelector('main');
+addHomeCtn(mainElement);
 
-//Event Listener
-document.querySelector("#navbar").addEventListener("click", (e) => {
+// Event Listener
+document.querySelector('#navbar').addEventListener('click', (e) => {
   e.preventDefault();
-  if (e.target.classList.contains("nav-link")) {
-    clear_class_list()
-    e.target.parentElement.classList = "nav-item px-3 active"
+  if (e.target.classList.contains('nav-link')) {
+    clearClassList();
+    e.target.parentElement.classList = 'nav-item px-3 active';
     switch (e.target.dataset.id) {
-      case "homeBtn":
-        addHomeCtn(mainElement)
+      case 'homeBtn':
+        addHomeCtn(mainElement);
         break;
-      case "orderBtn":
-        addOrderCtn(mainElement)
+      case 'orderBtn':
+        addOrderCtn(mainElement);
         break;
-      case "contactBtn":
-        addContactCtn(mainElement)
+      case 'contactBtn':
+        addContactCtn(mainElement);
+        break;
+      default:
+        addHomeCtn(mainElement);
         break;
     }
   }

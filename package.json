@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/karthi07/restaurant_page_js.git"
   },
-  "author": "",
+  "author": "Karthick Venkatesan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/karthi07/restaurant_page_js/issues"
@@ -18,12 +18,12 @@
   "homepage": "https://github.com/karthi07/restaurant_page_js#readme",
   "devDependencies": {
     "css-loader": "^3.6.0",
-    "postcss-loader": "^3.0.0",
-    "sass": "^1.26.9",
-    "sass-loader": "^9.0.1",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",

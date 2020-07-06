@@ -12,10 +12,8 @@ const homeHtml = `
   </div>
   <div class="product-device shadow-sm d-none d-md-block"></div>
   <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-</div>`
+</div>`;
 
-
-
-export function addHomeCtn(element) {
-  element.innerHTML = homeHtml
+export default function addHomeCtn(element) {
+  element.innerHTML = homeHtml;
 }
