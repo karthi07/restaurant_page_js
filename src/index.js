@@ -7,15 +7,18 @@ import addContactCtn from './contact';
 
 const contentElement = document.querySelector('#content');
 
-const mainHtml = `
-<nav id="navbar" class="navbar  fixed-top  navbar-expand-lg navbar-dark  bg-dark">
+const navElement = document.createElement('nav');
+navElement.id = 'navbar';
+navElement.classList = 'navbar  fixed-top  navbar-expand-lg navbar-dark  bg-dark';
+
+navElement.innerHTML = `
   <a class="navbar-brand " href="#">JS Restaurant</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse ml-4" id="navbarSupportedContent">
+  <div class="collaps kindly make use of document.createElement and document.appendChilde navbar-collapse ml-4" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item px-3 active" id="homeBtn">
         <a class="nav-link" data-id="homeBtn" href="#data">Home </a>
@@ -32,19 +35,20 @@ const mainHtml = `
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-</nav>
-<main class="container" id="main"></main>
-`;
+</nav>`;
+
+const mainElement = document.createElement('main');
+mainElement.classList = 'container';
+
+contentElement.appendChild(navElement);
+contentElement.appendChild(mainElement);
 
 function clearClassList() {
   document.querySelector('#homeBtn').classList = 'nav-item px-3';
   document.querySelector('#orderBtn').classList = 'nav-item px-3';
   document.querySelector('#contactBtn').classList = 'nav-item px-3';
 }
-
-contentElement.innerHTML = mainHtml;
 // Initial load
-const mainElement = document.querySelector('main');
 addHomeCtn(mainElement);
 
 // Event Listener
