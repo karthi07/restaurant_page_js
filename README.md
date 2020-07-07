@@ -31,7 +31,8 @@ Project to practice DOM manipulation by dynamically rendering a simple restauran
 
 - to use project in dev mode
   - install reqired project using npm [`npm install`] 
-  - start editing js files in `src` directory and run webpack [ `npx webpack `]
+  - start editing js files in `src` directory
+  - Use `npm run development` or `npm run build` to run webpack in dev or production mode respectively 
 
 
 ### Usage
