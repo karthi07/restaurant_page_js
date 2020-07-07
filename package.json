@@ -4,7 +4,9 @@
   "description": "Project to practe DOM manipulation by dynamically rendering a simple restaurant homepage!  using JavaScript alone to generate the entire contents of the website!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack --mode=production",
+    "development": "npx webpack --mode=development"
   },
   "repository": {
     "type": "git",
