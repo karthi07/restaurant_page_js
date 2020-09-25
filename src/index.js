@@ -39,7 +39,7 @@ document.querySelector('#navbar').addEventListener('click', (e) => {
     clearClassList();
     e.target.parentElement.classList = 'nav-item px-3 active';
     mainElement.textContent = '';
-    
+
     switch (e.target.dataset.id) {
       case 'homeBtn':
         addHomeCtn(mainElement);
