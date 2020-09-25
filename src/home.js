@@ -1,45 +1,62 @@
-const homeHtml = `
-<div id="home" class="position-relative overflow-hidden h-100 p-3 p-md-5 m-md-3 my-auto text-center bg-light">
-  <div class="col-md-10 p-lg-5 mx-auto">
-    <h1 class="display-4 font-weight-normal">JS Restaurant</h1>
-    <p class="lead font-weight-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-      culpa qui officia deserunt mollit anim id est laborum.</p>
-    <a class="btn btn-outline-secondary" href="#order">Order Food</a>
-  </div>
-  <div class="product-device shadow-sm d-none d-md-block"></div>
-  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-</div>`;
+
+const homeHtml = document.createElement('div');
+homeHtml.id = 'home'
+homeHtml.classList = 'position-relative overflow-hidden h-100 p-3 p-md-5 m-md-5 text-center bg-light display-4';
+homeHtml.innerHTML = 'JS Restaurant'
 
 export function addHomeCtn(element) {
-  element.innerHTML = homeHtml;
+  element.appendChild(homeHtml);
 }
 
 export const addNavbar = () => {
-  document.querySelector('#navbar').innerHTML += `
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="navbar-collapse ml-4" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item px-3 active" id="homeBtn">
-        <a class="nav-link" data-id="homeBtn" href="#data">Home </a>
-      </li>
-      <li class="nav-item px-3" id="orderBtn">
-        <a class="nav-link" data-id="orderBtn" href="#main"> Order Food </a>
-      </li>
-      <li class="nav-item px-3" id="contactBtn">
-        <a class="nav-link" data-id="contactBtn" href="#main"> Contact </a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>`;
+  const navbar = document.createElement('div')
+  navbar.classList="navbar-collapse ml-4";
+  navbar.id = "navbarSupportedContent";
+
+  const ul = document.createElement('ul');
+  ul.classList = "navbar-nav mr-auto";
+
+  const li1 = document.createElement('li');
+  li1.classList = "nav-item px-3 active";
+  li1.id = "homeBtn";
+  const a1 = document.createElement('a');
+  a1.classList="nav-link";
+  a1.setAttribute('data-id',"homeBtn");
+  a1.setAttribute('href',"#home");
+  a1.innerHTML = "Home";
+  li1.appendChild(a1)
+
+  ul.appendChild(li1)
+
+
+  const li2 = document.createElement('li');
+  li2.classList = "nav-item px-3 active";
+  li2.id = "orderBtn";
+  const a2 = document.createElement('a');
+  a2.classList="nav-link";
+  a2.setAttribute('data-id',"orderBtn");
+  a2.setAttribute('href',"#order");
+  a2.innerHTML = "Order Food";
+  li2.appendChild(a2)
+
+
+  ul.appendChild(li2)
+
+
+  const li3 = document.createElement('li');
+  li3.classList = "nav-item px-3 active";
+  li3.id = "contactBtn";
+  const a3 = document.createElement('a');
+  a3.classList="nav-link";
+  a3.setAttribute('data-id',"contactBtn");
+  a3.setAttribute('href',"#contact");
+  a3.innerHTML = "Contact";
+  li3.appendChild(a3)
+
+  ul.appendChild(li3)
+
+  navbar.appendChild(ul);
+  document.querySelector('#navbar').appendChild(navbar);
+
 };
