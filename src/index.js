@@ -23,7 +23,7 @@ mainElement.classList = 'container';
 contentElement.appendChild(navElement);
 contentElement.appendChild(mainElement);
 
-function clearClassList() {
+const clearClassList = () => {
   document.querySelector('#homeBtn').classList = 'nav-item px-3';
   document.querySelector('#orderBtn').classList = 'nav-item px-3';
   document.querySelector('#contactBtn').classList = 'nav-item px-3';

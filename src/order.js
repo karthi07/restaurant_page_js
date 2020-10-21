@@ -9,6 +9,8 @@ orderimg.setAttribute('src', 'img/order.png');
 
 orderHtml.appendChild(orderimg);
 
-export default function addOrderCtn(element) {
+const addOrderCtn = (element) => {
   element.appendChild(orderHtml);
 }
+
+export default addOrderCtn;
