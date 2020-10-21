@@ -11,6 +11,6 @@ orderHtml.appendChild(orderimg);
 
 const addOrderCtn = (element) => {
   element.appendChild(orderHtml);
-}
+};
 
 export default addOrderCtn;

@@ -5,6 +5,6 @@ contactHtml.innerHTML = 'Contact us - contact@info.com';
 
 const addContactCtn = (element) => {
   element.appendChild(contactHtml);
-}
+};
 
 export default addContactCtn;
